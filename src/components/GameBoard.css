@@ -1,0 +1,299 @@
+/* Isotropic-inspirerad stil */
+.iso-game {
+  display: flex;
+  min-height: 100vh;
+  background: #d4d0c8;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 13px;
+  color: #000;
+}
+
+/* Vänster panel - Logg */
+.iso-log-panel {
+  width: 320px;
+  background: #fff;
+  border-right: 2px solid #808080;
+  display: flex;
+  flex-direction: column;
+}
+
+.iso-log {
+  flex: 1;
+  padding: 8px;
+  overflow-y: auto;
+  background: #ffffee;
+  border: 1px inset #808080;
+  margin: 4px;
+}
+
+.log-entry {
+  padding: 2px 0;
+  border-bottom: 1px dotted #ccc;
+  line-height: 1.4;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* Höger panel - Huvudspelet */
+.iso-main-panel {
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Header */
+.iso-header {
+  background: #000080;
+  color: #fff;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iso-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.iso-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sektioner */
+.iso-section {
+  background: #fff;
+  border: 2px outset #fff;
+  padding: 8px;
+}
+
+.iso-section-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #808080;
+  color: #000080;
+}
+
+/* Supply */
+.iso-supply {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.iso-supply-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.iso-supply-card {
+  padding: 3px 6px;
+  border: 1px solid #808080;
+  background: #f0f0f0;
+  cursor: default;
+}
+
+.iso-supply-card.buyable {
+  cursor: pointer;
+  border: 2px solid #000;
+  font-weight: bold;
+}
+
+.iso-supply-card.buyable:hover {
+  background: #ffff00;
+}
+
+.iso-supply-card.empty {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+/* Spelarna */
+.iso-players {
+  display: flex;
+  gap: 20px;
+}
+
+.iso-player {
+  display: flex;
+  gap: 12px;
+}
+
+.iso-player-name {
+  font-weight: bold;
+}
+
+.iso-player.opponent {
+  color: #666;
+}
+
+/* State */
+.iso-state {
+  display: flex;
+  gap: 20px;
+  padding: 4px;
+  background: #ffffcc;
+  border: 1px solid #808080;
+}
+
+.iso-phase {
+  font-weight: bold;
+  color: #000080;
+}
+
+/* Spelade kort */
+.iso-played {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Effect prompt */
+.iso-effect-prompt {
+  background: #ffffcc !important;
+  border: 2px solid #cc9900 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.iso-effect-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Hand */
+.iso-hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 24px;
+}
+
+/* Kort (text-länkar) */
+.iso-card {
+  padding: 2px 6px;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.iso-card.clickable {
+  cursor: pointer;
+}
+
+.iso-card.playable {
+  border: 1px solid #000;
+  font-weight: bold;
+}
+
+.iso-card.playable:hover,
+.iso-card.clickable:hover {
+  background: #ffff00;
+}
+
+.iso-card.selected {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* Kortfärger (Isotropic-stil) */
+.card-victory {
+  color: #228b22;
+}
+
+.card-treasure {
+  color: #b8860b;
+}
+
+.card-action {
+  color: #0000cd;
+}
+
+.card-attack {
+  color: #8b0000;
+}
+
+.card-reaction {
+  color: #4b0082;
+}
+
+.card-curse {
+  color: #800080;
+}
+
+/* Knappar */
+.iso-btn {
+  background: #d4d0c8;
+  border: 2px outset #fff;
+  padding: 4px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.iso-btn:hover {
+  background: #c0c0c0;
+}
+
+.iso-btn:active {
+  border-style: inset;
+}
+
+.iso-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Actions */
+.iso-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Help/Card reference */
+.iso-help {
+  background: #f8f8f8 !important;
+}
+
+.iso-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+}
+
+.iso-card-ref {
+  display: flex;
+  gap: 8px;
+}
+
+.iso-card-ref .iso-card {
+  min-width: 60px;
+}
+
+.iso-card-desc {
+  color: #666;
+}
+
+/* Scrollbar */
+.iso-log::-webkit-scrollbar {
+  width: 16px;
+}
+
+.iso-log::-webkit-scrollbar-track {
+  background: #d4d0c8;
+}
+
+.iso-log::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 2px outset #fff;
+}
